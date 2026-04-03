@@ -121,7 +121,7 @@ const menu = [
 const menuContainer = document.getElementById("menu-container");
 menu.forEach((plat) => {
   menuContainer.innerHTML += `
-    <div class="bg-[#FAF6F0] rounded-2xl overflow-hidden hover:shadow-lg transition-shadow" data-aos="fade-up">
+    <div class="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow" data-aos="fade-up">
       <img src="${plat.image}" alt="${plat.nom}" class="w-full h-48 object-cover" />
       <div class="p-6">
         <span class="bg-amber-100 text-amber-600 text-xs font-semibold px-3 py-1 rounded-full">${plat.categorie}</span>
@@ -179,12 +179,12 @@ function mettreAjourPanier(){
         const prixNum = parseInt(p.prix.replace(/\D/g , ""));
         totalPrix += prixNum * p.quantite;
          return `
-      <div class="flex items-center justify-between gap-4 py-3 border-b border-gray-100">
-        <div class="flex-1">
+      <div class= flex items-center justify-between gap-4 py-3 border-b border-gray-100">
+        <div class=" flex-1">
           <p class="font-semibold text-sm">${p.nom}</p>
           <p class="text-amber-500 text-sm">${p.prix}</p>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="  flex items-center gap-2">
           <button onclick="changerQuantite('${p.nom}', -1)"
             class="w-7 h-7 rounded-full border border-gray-200 hover:bg-gray-100 font-bold text-lg leading-none">−</button>
           <span class="font-semibold w-4 text-center">${p.quantite}</span>
