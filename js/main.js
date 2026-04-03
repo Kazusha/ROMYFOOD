@@ -2,6 +2,31 @@ AOS.init({
   duration: 800,
   once: true,
 });
+const notyf = new Notyf({
+  duration: 1000,
+  position: {
+    x: 'right',
+    y: 'top',
+  },
+  types: [
+    {
+      type: 'warning',
+      background: 'orange',
+      icon: {
+        className: 'material-icons',
+        tagName: 'i',
+        text: 'warning'
+      }
+    },
+    {
+      type: 'error',
+      background: 'indianred',
+      duration: 2000,
+      dismissible: true
+    }
+  ]
+});
+
 let panier=[];
 const menu = [
   {
@@ -158,6 +183,7 @@ function ajouterAuPanier(nom ,prix){
     }
     mettreAjourPanier();
     togglePanier();
+    notyf.success(`${nom} ajouté au panier !`);
 }
 
 function mettreAjourPanier(){
@@ -204,9 +230,12 @@ function changerQuantite(nom ,delta){
     if(item.quantite <= 0)  panier = panier.filter(p => p.nom !== nom);
     mettreAjourPanier();
 }
-function videPanier(){
+function viderPanier(){
     panier = [];
+    item =0 ;
+    items =0;
     mettreAjourPanier();
+    notyf.success('Panier Vide')
 }
 function commanderPanier(){
     if (panier.length === 0 ) return;
