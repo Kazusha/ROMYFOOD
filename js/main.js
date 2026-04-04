@@ -3,7 +3,7 @@ AOS.init({
   once: true,
 });
 const notyf = new Notyf({
-  duration: 1000,
+  duration: 5000,
   position: {
     x: 'right',
     y: 'top',
@@ -243,4 +243,17 @@ const lignes = panier.map(p => `- ${p.nom} x${p.quantite} (${p.prix})`).join("\n
   const total = document.getElementById("panier-total").textContent;
   const message = `Bonjour ROMYFOOD, je voudrais commander :\n${lignes}\n\nTotal : ${total}`;
   window.open(`https://wa.me/22891127634?text=${encodeURIComponent(message)}`, "_blank");
+}
+function envoyerFormulaire(e){
+  e.preventDefault();
+  const nom= document.getElementById("form-nom").value;
+  const email = document.getElementById("form-email").value;
+  const message = document.getElementById("form-message").value;
+  if(!nom || !email || !message){
+    notyf.error("Veillez remplir tout les champs !");
+    return;
+  }
+  const texte = `Bonjour ROMYFOOD !\nNom : ${nom}\nEmail : ${email}\nMessage : ${message}`;
+  window.open(`https://wa.me/22891127634?text=${encodeURIComponent(texte)}`, "_blank");
+  notyf.success("Message envoyer avec succes !")
 }

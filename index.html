@@ -5,81 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROMYFOOD</title>
     <link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
   </head>
-<div id="panier-overlay"
-  class="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity z-40"
-  onclick="togglePanier()">
-</div>
 
-<div id="panier-panel"
-  class="fixed top-0 right-0 h-full w-80 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+  <body class="bg-[#FAF6F0] text-black font-fondamento">
 
-  <div class="flex items-center justify-between p-6 border-b border-gray-100">
-    <h2 class="text-xl font-bold">Mon Panier 🛒</h2>
-    <button onclick="togglePanier()" class="text-gray-400 hover:text-black text-2xl">&times;</button>
-  </div>
-
-  <div id="panier-items" class="flex-1 overflow-y-auto p-6 space-y-4">
-    <p id="panier-vide" class="text-gray-400 text-center mt-10">Votre panier est vide</p>
-  </div>
-
-  <div class="p-6 border-t border-gray-100">
-    <div class="flex items-center justify-between mb-4">
-      <span class="font-semibold text-lg">Total</span>
-      <span id="panier-total" class="font-bold text-xl text-amber-500">0 FCFA</span>
+    <div id="panier-overlay"
+      class="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity z-40"
+      onclick="togglePanier()">
     </div>
-    <button onclick="commanderPanier()"
-      class="w-full bg-amber-500 text-white py-3 rounded-full font-semibold hover:bg-amber-600 transition-colors">
-      Commander via WhatsApp
-    </button>
-    <button onclick="viderPanier()"
-      class="w-full mt-2 border border-gray-200 text-gray-500 py-3 rounded-full font-semibold hover:bg-gray-50 transition-colors">
-      Vider le panier
-    </button>
-  </div>
 
-</div>
-  <body class="bg-[#FAF6F0]  text-black font-fondamento">
+    <div id="panier-panel"
+      class="fixed top-0 right-0 h-full w-80 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+
+      <div class="flex items-center justify-between p-6 border-b border-gray-100">
+        <h2 class="text-xl font-bold">Mon Panier 🛒</h2>
+        <button onclick="togglePanier()" class="text-gray-400 hover:text-black text-2xl">&times;</button>
+      </div>
+
+      <div id="panier-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+        <p id="panier-vide" class="text-gray-400 text-center mt-10">Votre panier est vide</p>
+      </div>
+
+      <div class="p-6 border-t border-gray-100">
+        <div class="flex items-center justify-between mb-4">
+          <span class="font-semibold text-lg">Total</span>
+          <span id="panier-total" class="font-bold text-xl text-amber-500">0 FCFA</span>
+        </div>
+        <button onclick="commanderPanier()"
+          class="w-full bg-amber-500 text-white py-3 rounded-full font-semibold hover:bg-amber-600 transition-colors">
+          Commander via WhatsApp
+        </button>
+        <button onclick="viderPanier()"
+          class="w-full mt-2 border border-gray-200 text-gray-500 py-3 rounded-full font-semibold hover:bg-gray-50 transition-colors">
+          Vider le panier
+        </button>
+      </div>
+
+    </div>
 
     <header>
-      <nav class="bg-[#FAF6F0] fixed w-full z-50  ">
+      <nav class="bg-[#FAF6F0] fixed w-full z-50">
         <div data-aos="fade-up" class="max-w-6xl mx-auto w-full flex items-center justify-between py-5 px-6">
 
           <a href="#">
-            <img
-              src="images/ROMY__1_-removebg-preview.png"
-              alt="RomyFood logo"
-              class="h-15 w-auto object-contain"
-            />
+            <img src="images/ROMY__1_-removebg-preview.png" alt="RomyFood logo" class="h-12 w-auto object-contain"/>
           </a>
 
           <div class="flex items-center gap-10">
-            <a href="#services" class="text-black hover:text-accent transition-colors font-medium">Services</a>
-            <a href="#menu" class="text-black hover:text-accent transition-colors font-medium">Menu</a>
-            <a href="#about" class="text-black hover:text-accent transition-colors font-medium">About</a>
-            <a href="#avis" class="text-black hover:text-accent transition-colors font-medium">Avis</a>
-            <a href="#contact" class="text-black hover:text-accent transition-colors font-medium">Contact</a>
-            
+            <a href="#services" class="text-black hover:text-amber-500 transition-colors font-medium">Services</a>
+            <a href="#menu" class="text-black hover:text-amber-500 transition-colors font-medium">Menu</a>
+            <a href="#about" class="text-black hover:text-amber-500 transition-colors font-medium">About</a>
+            <a href="#avis" class="text-black hover:text-amber-500 transition-colors font-medium">Avis</a>
+            <a href="#contact" class="text-black hover:text-amber-500 transition-colors font-medium">Contact</a>
           </div>
 
-          <a href="#contact"
-            class="bg-accent text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
-            Réserver
-          </a>
-         <p onclick="togglePanier()" class=" bg-white text-xl  px-6 py-2.5 rounded-lg relative cursor-pointer">
-            Panier
-            <span id="panier-count"     class="absolute -top-2 -right-2 bg-amber-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
+          <div class="flex items-center gap-4">
+            <a href="#contact"
+              class="bg-amber-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
+              Réserver
+            </a>
+            <p onclick="togglePanier()" class="bg-white text-xl px-6 py-2.5 rounded-lg relative cursor-pointer">
+              Panier
+              <span id="panier-count"
+                class="absolute -top-2 -right-2 bg-amber-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
                 0
-
-                
-            </span>
-         </p>
+              </span>
+            </p>
+          </div>
 
         </div>
       </nav>
@@ -142,7 +139,8 @@
         </div>
       </div>
     </section>
-   <section id="services" class="bg-white py-20">
+
+    <section id="services" class="bg-white py-20">
   <div class="max-w-6xl mx-auto px-6">
 
     <div class="mb-16" data-aos="fade-up">
@@ -179,7 +177,7 @@
         <p href="#contact"
                 class="border-2 border-accent mt-10 text-accent px-8 py-3 rounded-full font-semibold text-lg hover:bg-accent hover:text-white transition-all animate-bounce">
 
-                Réserver
+                Commander
               </p>
 
     </div>
@@ -187,21 +185,217 @@
       </div>
       </div>
       </section>
-      <section id="menu" class="bg-[#FAF6F0] py-20">
-          <div class="max-w-6xl mx-auto px-6">
-            <div class ="mb-16" data-aos="fade-up">
-                <p class="text-accent text-lg tracking-wide mb-2">Découvrez nos délices</p>
-                <h2 class="text-4xl font-bold">Notre Menu</h2>
-                </div>
-                <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    </div>
-        </div>
-      </section>
 
+    <section id="menu" class="bg-[#FAF6F0] py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-16" data-aos="fade-up">
+          <p class="text-amber-500 text-lg tracking-wide mb-2">Découvrez nos délices</p>
+          <h2 class="text-4xl font-bold">Notre Menu</h2>
+        </div>
+        <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-16">
+
+          <div class="flex-1 flex justify-center" data-aos="fade-right">
+            <div class="relative w-80 h-80">
+              <div class="w-80 h-80 bg-amber-100 rounded-full"></div>
+              <img
+                src="images/WhatsApp-Image-2023-10-23-at-13.27.16-removebg-preview.png"
+                alt="ROMYFOOD"
+                class="absolute -bottom-6 -right-6 w-72 h-72 object-cover rounded-full border-4 border-amber-500 animate-spin-slow"
+              />
+            </div>
+          </div>
+
+          <div class="flex-1 space-y-6" data-aos="fade-left">
+            <p class="text-amber-500 text-lg tracking-wide">Notre histoire</p>
+            <h2 class="text-4xl font-bold leading-tight">
+              Une passion née <br> de la <span class="text-amber-500">cuisine africaine</span>
+            </h2>
+            <p class="text-gray-500 leading-relaxed">
+              ROMYFOOD est né d'une passion profonde pour la cuisine togolaise et africaine.
+              Fondé avec l'ambition de partager des saveurs authentiques,
+              notre restaurant propose des plats préparés avec des ingrédients
+              frais, des épices soigneusement sélectionnées et des recettes
+              transmises de génération en génération.
+            </p>
+            <p class="text-gray-500 leading-relaxed">
+              Chaque plat que nous servons raconte une histoire, celle de nos
+              racines, de notre culture et de notre amour pour la bonne table.
+              Chez ROMYFOOD, vous êtes bien plus qu'un client — vous êtes de la famille.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="text-left">
+                <p class="text-3xl font-bold text-amber-500">5+</p>
+                <p class="text-gray-500 text-sm">Ans d'expérience</p>
+              </div>
+              <div class="text-left">
+                <p class="text-3xl font-bold text-amber-500">200+</p>
+                <p class="text-gray-500 text-sm">Clients satisfaits</p>
+              </div>
+              <div class="text-left">
+                <p class="text-3xl font-bold text-amber-500">20+</p>
+                <p class="text-gray-500 text-sm">Plats au menu</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="avis" class="bg-[#FAF6F0] py-20">
+      <div class="max-w-6xl mx-auto px-6">
+
+        <div class="mb-16" data-aos="fade-up">
+          <p class="text-amber-500 text-lg tracking-wide mb-2">Ce qu'ils en pensent</p>
+          <h2 class="text-4xl font-bold">Avis de nos clients</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div class="bg-white rounded-lg p-8 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              <span class="text-amber-500">★★★★★</span>
+            </div>
+            <p class="text-gray-500 leading-relaxed mb-6">
+              "La sauce gombo était incroyable, pleine de saveur et exactement comme celle de ma grand-mère. Je recommande ROMYFOOD à tout le monde !"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-500">K</div>
+              <div>
+                <p class="font-semibold">Kossi A.</p>
+                <p class="text-gray-400 text-sm">Client régulier</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-8 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              <span class="text-amber-500">★★★★★</span>
+            </div>
+            <p class="text-gray-500 leading-relaxed mb-6">
+              "Le poulet Yassa était parfait et le service très rapide. Une adresse à ne pas manquer à Lomé !"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-500">A</div>
+              <div>
+                <p class="font-semibold">Afi M.</p>
+                <p class="text-gray-400 text-sm">Cliente fidèle</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-8 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex gap-1 mb-4">
+              <span class="text-amber-500">★★★★</span>
+              <span class="text-gray-300">★</span>
+            </div>
+            <p class="text-gray-500 leading-relaxed mb-6">
+              "J'ai commandé via WhatsApp et la livraison était rapide. L'attieké poisson était frais et délicieux, je reviendrai !"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-500">Y</div>
+              <div>
+                <p class="font-semibold">Yao B.</p>
+                <p class="text-gray-400 text-sm">Nouveau client</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="bg-black text-white py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+
+          <div class="space-y-6" data-aos="fade-right">
+            <div>
+              <p class="text-amber-500 text-lg tracking-wide mb-2">Nous trouver</p>
+              <h2 class="text-3xl font-bold mb-6">Contactez-nous</h2>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <img src="images/espace-reserve.png" alt="Adresse" class="w-5 h-5">
+              <div>
+                <p class="font-semibold">Adresse</p>
+                <p class="text-gray-400">Adidogomé, Lomé, Togo</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <img src="images/whatsapp.png" alt="WhatsApp" class="w-5 h-5">
+              <div>
+                <p class="font-semibold">WhatsApp</p>
+                <a href="https://wa.me/22891127634" class="text-gray-400 hover:text-amber-500 transition-colors">+228 91 12 76 34</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <img src="images/e-mail.png" alt="Email" class="w-5 h-5">
+              <div>
+                <p class="font-semibold">Email</p>
+                <a href="mailto:limanmidjie@gmail.com" class="text-gray-400 hover:text-amber-500 transition-colors">limanmidjie@gmail.com</a>
+              </div>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-3">Suivez-nous</p>
+              <div class="flex items-center gap-4">
+                <a href="#"><img src="images/facebook.png" alt="Facebook" class="w-5 h-5 hover:opacity-70 transition-opacity"></a>
+                <a href="#"><img src="images/tic-tac.png" alt="TikTok" class="w-5 h-5 hover:opacity-70 transition-opacity"></a>
+                <a href="#"><img src="images/whatsapp.png" alt="WhatsApp" class="w-5 h-5 hover:opacity-70 transition-opacity"></a>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-left">
+            <form class="space-y-4" onsubmit="envoyerFormulaire(event)">
+              <input
+                type="text"
+                id="form-nom"
+                placeholder="Votre nom"
+                class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors"
+              />
+              <input
+                type="email"
+                id="form-email"
+                placeholder="Votre email"
+                class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors"
+              />
+              <textarea
+                id="form-message"
+                rows="5"
+                placeholder="Votre message"
+                class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors resize-none"
+              ></textarea>
+              <button
+                type="submit"
+                class="w-full bg-amber-500 text-white py-3 rounded-full font-semibold hover:bg-amber-600 transition-colors">
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <img src="images/ROMY__1_-removebg-preview.png" alt="logo" class="h-8 w-auto">
+          <p class="text-gray-500 text-sm">© 2025 ROMYFOOD. Tous droits réservés.</p>
+          <p class="text-gray-500 text-sm">Fait  à Lomé, Togo</p>
+        </div>
+
+      </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
